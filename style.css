@@ -1,7 +1,11 @@
 html,
 body {
   margin: 0;
-  padding: 0;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
 }
 
 /* I dette eksempel er Flex Containeren angivet til at vises som 'flex'
@@ -15,7 +19,7 @@ række, så vil den nye række fremkomme centreret under den første pga.
 .flex-container {
   border: 8px solid black;
   background-color: seashell;
-  height: 700px;
+  height: 600px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -26,8 +30,44 @@ række, så vil den nye række fremkomme centreret under den første pga.
 
 .flex-item {
   border: 5px solid rgb(11, 165, 5);
-  background-color: rgb(255, 201, 131);
   padding: 10px;
   width: 60px;
+  text-shadow: 0 0 5px #fff;
   text-align: center;
+}
+
+.item-1 {
+  background-color: rgb(36, 119, 15);
+}
+
+.item-2 {
+  background-color: rgb(28, 26, 172);
+}
+
+.item-3 {
+  background-color: rgb(158, 25, 147);
+}
+
+.item-4 {
+  background-color: rgb(197, 199, 59);
+}
+
+.item-5 {
+  background-color: rgb(209, 73, 39);
+}
+
+.item-6 {
+  background-color: rgb(121, 121, 121);
+}
+
+.item-7 {
+  background-color: rgb(99, 81, 0);
+}
+
+.item-8 {
+  background-color: rgb(123, 255, 248);
+}
+
+.item-9 {
+  background-color: rgb(199, 170, 180);
 }
