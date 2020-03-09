@@ -14,7 +14,7 @@ centreret i midten af containerens Cross Axis. Mellemrummet bliver fordelt
 ligeligt mellem de ni Flex Elementer på Main Axis, og når man indskrænker
 skærmstørrelsen i bredden, så de ni elementer ikke længere kan være på én
 række, så vil den nye række fremkomme centreret under den første pga.
-'align-content' er sat til 'center' */
+'align-content' er sat til 'center'. */
 
 .flex-container {
   border: 8px solid black;
@@ -27,6 +27,10 @@ række, så vil den nye række fremkomme centreret under den første pga.
   align-items: center;
   align-content: center;
 }
+
+/* Flex Elementerne er i eksemplet tildelt specifikke 'orders' således at
+de optræder i en bestemt rækkefølge. Hvis order propertien ikke er tildelt
+et item, så vil den pr. default altid være 0, og dermed stå foran de andre. */
 
 .flex-item {
   border: 5px solid rgb(11, 165, 5);
@@ -42,22 +46,27 @@ række, så vil den nye række fremkomme centreret under den første pga.
 
 .item-2 {
   background-color: rgb(28, 26, 172);
+  order: 1;
 }
 
 .item-3 {
   background-color: rgb(158, 25, 147);
+  order: 2;
 }
 
 .item-4 {
   background-color: rgb(197, 199, 59);
+  order: 4;
 }
 
 .item-5 {
   background-color: rgb(209, 73, 39);
+  order: 3;
 }
 
 .item-6 {
   background-color: rgb(121, 121, 121);
+  order: 5;
 }
 
 .item-7 {
@@ -70,4 +79,30 @@ række, så vil den nye række fremkomme centreret under den første pga.
 
 .item-9 {
   background-color: rgb(199, 170, 180);
+}
+
+/* Du kan fx bytte rundt på Flex Elementernes placering i Flex Containeren
+ved et specifik breakpoint. Her har jeg ændret rækkefølgen vha. en Media
+Query. Når vinduet er max 500 px bredt, så ændres rækkefølgen. */
+
+@media (max-width: 500px) {
+  .item-1 {
+    order: 1;
+  }
+
+  .item-2 {
+    order: 5;
+  }
+
+  .item-3 {
+    order: 2;
+  }
+
+  .item-4 {
+    order: 3;
+  }
+
+  .item-5 {
+    order: 4;
+  }
 }
